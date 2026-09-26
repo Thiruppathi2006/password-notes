@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit 4 | Topic : Password</title>
+  <meta name="description" content="Seminar presentation notes and flowcharts on Unit IV: Password Authentication, Cryptographic Salt Storage, and Process Flow Diagrams.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Minimal Header -->
+  <header class="site-header" id="site-header">
+    <div class="header-container">
+      <a href="#" class="brand-logo" id="brand-logo">
+        <span class="logo-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+          </svg>
+        </span>
+        <span class="logo-text">Topic : <strong>Password</strong></span>
+      </a>
+
+      <div class="header-badge">
+        <span>Unit IV Notes</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <!-- Seminar Gallery Section (3 Framed Images with Individual Download Buttons) -->
+    <section class="seminar-section" id="seminar-gallery" aria-labelledby="seminar-heading">
+      <div class="container">
+        <div class="section-header">
+          <h1 id="seminar-heading" class="section-title">Notes for password</h1>
+          <p class="section-description">
+            High-resolution reference notes &bull; Click any slide to enlarge, or click download to save.
+          </p>
+        </div>
+
+        <!-- 3-Column Responsive Gallery Grid -->
+        <div class="seminar-grid" id="seminar-grid" role="region" aria-label="Seminar Images Gallery">
+          <!-- Card 1 -->
+          <article class="seminar-card" id="seminar-card-1" data-index="0">
+            <div class="image-wrapper" id="img-container-1">
+              <figure class="image-figure">
+                <img 
+                  id="seminar-img-1"
+                  src="assets/images/seminar-1.jpg" 
+                  alt="Seminar Notes Slide 1 - Unit IV Password Fundamentals"
+                  class="seminar-image"
+                  loading="eager"
+                >
+                <div class="image-overlay" role="button" tabindex="0" aria-label="Open image 1 in full lightbox view">
+                  <div class="overlay-content">
+                    <span class="zoom-icon" aria-hidden="true">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        <line x1="11" y1="8" x2="11" y2="14"/>
+                        <line x1="8" y1="11" x2="14" y2="11"/>
+                      </svg>
+                    </span>
+                    <span class="overlay-text">Click to Enlarge</span>
+                  </div>
+                </div>
+              </figure>
+            </div>
+
+            <div class="card-footer">
+              <a 
+                href="assets/images/seminar-1.jpg" 
+                download="seminar-slide-1.jpg" 
+                class="btn btn-primary download-btn" 
+                id="download-btn-1"
+                data-card-id="1"
+                data-src="assets/images/seminar-1.jpg"
+                data-filename="seminar-slide-1.jpg"
+                aria-label="Download Image 1"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                  <polyline points="7 10 12 15 17 10"/>
+                  <line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+                <span>Download Image</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="seminar-card" id="seminar-card-2" data-index="1">
+            <div class="image-wrapper" id="img-container-2">
+              <figure class="image-figure">
+                <img 
+                  id="seminar-img-2"
+                  src="assets/images/seminar-2.jpg" 
+                  alt="Seminar Notes Slide 2 - Unit IV Password Authentication & Storage"
+                  class="seminar-image"
+                  loading="eager"
+                >
+                <div class="image-overlay" role="button" tabindex="0" aria-label="Open image 2 in full lightbox view">
+                  <div class="overlay-content">
+                    <span class="zoom-icon" aria-hidden="true">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        <line x1="11" y1="8" x2="11" y2="14"/>
+                        <line x1="8" y1="11" x2="14" y2="11"/>
+                      </svg>
+                    </span>
+                    <span class="overlay-text">Click to Enlarge</span>
+                  </div>
+                </div>
+              </figure>
+            </div>
+
+            <div class="card-footer">
+              <a 
+                href="assets/images/seminar-2.jpg" 
+                download="seminar-slide-2.jpg" 
+                class="btn btn-primary download-btn" 
+                id="download-btn-2"
+                data-card-id="2"
+                data-src="assets/images/seminar-2.jpg"
+                data-filename="seminar-slide-2.jpg"
+                aria-label="Download Image 2"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                  <polyline points="7 10 12 15 17 10"/>
+                  <line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+                <span>Download Image</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="seminar-card" id="seminar-card-3" data-index="2">
+            <div class="image-wrapper" id="img-container-3">
+              <figure class="image-figure">
+                <img 
+                  id="seminar-img-3"
+                  src="assets/images/seminar-3.jpg" 
+                  alt="Seminar Notes Slide 3 - Unit IV Authentication Process Flowchart"
+                  class="seminar-image"
+                  loading="eager"
+                >
+                <div class="image-overlay" role="button" tabindex="0" aria-label="Open image 3 in full lightbox view">
+                  <div class="overlay-content">
+                    <span class="zoom-icon" aria-hidden="true">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        <line x1="11" y1="8" x2="11" y2="14"/>
+                        <line x1="8" y1="11" x2="14" y2="11"/>
+                      </svg>
+                    </span>
+                    <span class="overlay-text">Click to Enlarge</span>
+                  </div>
+                </div>
+              </figure>
+            </div>
+
+            <div class="card-footer">
+              <a 
+                href="assets/images/seminar-3.jpg" 
+                download="seminar-slide-3.jpg" 
+                class="btn btn-primary download-btn" 
+                id="download-btn-3"
+                data-card-id="3"
+                data-src="assets/images/seminar-3.jpg"
+                data-filename="seminar-slide-3.jpg"
+                aria-label="Download Image 3"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                  <polyline points="7 10 12 15 17 10"/>
+                  <line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+                <span>Download Image</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Accessible Full-Screen Lightbox Modal -->
+  <dialog id="lightbox-modal" class="lightbox-modal" aria-label="Enlarged Seminar Slide View">
+    <div class="lightbox-backdrop"></div>
+    <div class="lightbox-container">
+      <header class="lightbox-header">
+        <div class="lightbox-meta">
+          <span class="lightbox-badge" id="lightbox-counter">Slide 1 of 3</span>
+          <h3 class="lightbox-title" id="lightbox-title">Seminar Slide View</h3>
+        </div>
+        <div class="lightbox-actions">
+          <a href="#" download class="lightbox-btn" id="lightbox-download-btn" aria-label="Download this slide">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+          </a>
+          <button type="button" class="lightbox-btn" id="lightbox-zoom-toggle" aria-label="Toggle actual size zoom">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              <line x1="11" y1="8" x2="11" y2="14"></line>
+              <line x1="8" y1="11" x2="14" y2="11"></line>
+            </svg>
+          </button>
+          <button type="button" class="lightbox-btn close-btn" id="lightbox-close-btn" aria-label="Close lightbox modal (Esc)">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </header>
+
+      <div class="lightbox-content">
+        <button type="button" class="lightbox-nav-btn prev-btn" id="lightbox-prev-btn" aria-label="View previous slide (Left Arrow)">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+
+        <div class="lightbox-image-viewport" id="lightbox-viewport">
+          <img id="lightbox-img" src="" alt="Enlarged seminar slide" class="lightbox-img">
+        </div>
+
+        <button type="button" class="lightbox-nav-btn next-btn" id="lightbox-next-btn" aria-label="View next slide (Right Arrow)">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
+
+      <footer class="lightbox-footer">
+        <span class="lightbox-hint">Use Left / Right arrow keys to navigate &bull; Esc to close</span>
+      </footer>
+    </div>
+  </dialog>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <p>&copy; 2026 Academic Notes &bull; Unit IV Password Authentication &amp; Security.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
