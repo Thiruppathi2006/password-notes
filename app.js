@@ -9,7 +9,7 @@ const seminarData = [
     id: 1,
     title: 'Slide 1: Password Fundamentals',
     src: 'assets/images/seminar-1.jpg',
-    filename: 'seminar-slide-1.jpg',
+    filename: 'you-got-it-slide-1.jpg',
     alt: 'Seminar Notes Slide 1 - Unit IV Password Fundamentals'
   },
   {
