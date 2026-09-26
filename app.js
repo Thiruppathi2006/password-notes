@@ -16,14 +16,14 @@ const seminarData = [
     id: 2,
     title: 'Slide 2: Password Authentication & Storage',
     src: 'assets/images/seminar-2.jpg',
-    filename: 'seminar-slide-2.jpg',
+    filename: 'you-got-it-slide-2.jpg',
     alt: 'Seminar Notes Slide 2 - Unit IV Password Authentication & Storage'
   },
   {
     id: 3,
     title: 'Slide 3: Authentication Process Flowchart',
     src: 'assets/images/seminar-3.jpg',
-    filename: 'seminar-slide-3.jpg',
+    filename: 'you-got-it-slide-3.jpg',
     alt: 'Seminar Notes Slide 3 - Unit IV Authentication Process Flowchart'
   }
 ];
