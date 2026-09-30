@@ -8,22 +8,22 @@ const seminarData = [
   {
     id: 1,
     title: 'Slide 1: Password Fundamentals',
-    src: 'assets/images/seminar-1.jpg',
-    filename: 'you-got-it-slide-1.jpg',
+    src: 'assets/images/sem1.png',
+    filename: 'sem1.png',
     alt: 'Seminar Notes Slide 1 - Unit IV Password Fundamentals'
   },
   {
     id: 2,
     title: 'Slide 2: Password Authentication & Storage',
-    src: 'assets/images/seminar-2.jpg',
-    filename: 'you-got-it-slide-2.jpg',
+    src: 'assets/images/sem2.png',
+    filename: 'sem2.png',
     alt: 'Seminar Notes Slide 2 - Unit IV Password Authentication & Storage'
   },
   {
     id: 3,
     title: 'Slide 3: Authentication Process Flowchart',
-    src: 'assets/images/seminar-3.jpg',
-    filename: 'you-got-it-slide-3.jpg',
+    src: 'assets/images/sem3.png',
+    filename: 'sem3.png',
     alt: 'Seminar Notes Slide 3 - Unit IV Authentication Process Flowchart'
   }
 ];
@@ -72,8 +72,8 @@ function initDownloadButtons() {
       e.preventDefault();
 
       const src = btn.getAttribute('data-src') || btn.getAttribute('href');
-      const filename = btn.getAttribute('data-filename') || 'seminar-slide.jpg';
       const cardId = btn.getAttribute('data-card-id') || '1';
+      const filename = btn.getAttribute('data-filename') || `sem${cardId}.png`;
 
       await triggerDownload(src, filename, `Slide ${cardId}`);
     });
